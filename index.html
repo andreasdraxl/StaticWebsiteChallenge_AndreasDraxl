@@ -63,11 +63,56 @@
                 </div>
             </header>
             <div class="main-page-content">
-                <div class="dashboard-column">
-                    <div class="dashboard-card">Project Information</div>
-                    <div class="dashboard-card">To-do List</div>
+                <div style="display: flex; flex-direction: column; row-gap: 16;"></div>
+                    <div class="dashboard-card" style="padding:30px 0; ">Project Information</div>
+                        <div style="display: flex; justify-content: space-between;">To-do List
+                            <p style="font-size: 20px; background-color: #ca8134;">HC</p>
+                            <button class="btn-secondary"><p style="width: 10px">test1</p>;"</button>
+                        </div>
+                        <div style="padding: 0 30px;">
+                            <div>
+                                <h5>Hospital Center</h5>
+                                <p>Community hospital located at downtown</p>
+                            </div>
+                            <div style="display: flex; column-gap: 30px; padding: 16px;">
+                                <div>
+                                    <p style="color: #969696; font-size: var(--base);">Status</p>
+                                    <p>Active</p>
+                                </div>
+                                <div>
+                                    <p style="color: #969696; font-size: var(--base);">Cost</p>
+                                    <p>€ 1.000.000.000</p>
+                                </div>
+                                <div>
+                                    <p style="color: #969696; font-size: var(--base);">Role</p>
+                                    <p>Engineer</p>
+                                </div>
+                                <div>
+                                    <p style="color: #969696; font-size: var(--base);">Finish Date</p>
+                                    <p>2030-05-01</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="viewer-container" class="dashboard-card"></div>
+                <div id="viewer-container"> 
+                    <div class="dashboard-card">
+                        <div style="padding: 20px 30px; display: flex; align-items: center;">test3</div>
+                        <h4>To-Do</h4>
+                        <div style="display: flex; align-items: center;">
+                            <span class="material-symbols-outlined">search</span>
+                            <input type="text" placeholder="Search To-Do">
+                        </div>
+                        <span class="material-symbols-outlined">add</span>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <div style="display: flex; column-gap: 15px;">
+                        <span class="material-symbols-outlined" style="margin: auto;">design_services</span>
+                        <p>Make anything here as you want, even it is too expensive</p>
+                    </div>
+                    <div style="text-wrap: nowrap; margin-left: 10px">test4</div>
+                </div>
             </div>
         </div>
     </main>
