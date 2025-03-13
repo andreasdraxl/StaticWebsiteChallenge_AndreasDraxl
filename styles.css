@@ -1,22 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 :root {
-    --primery: #029AE0;
-    --primery-100: #073044;
-    --primery-200: #415A66;
-    --primery-300: #017CB3;
-    --primery-400: #50B6E6;
+    --primary: #029AE0;
+    --primary-100: #073044;
+    --primary-200: #415A66;
+    --primary-300: #017CB3;
+    --primary-400: #50B6E6;
     --background: #202124;
     --background-100: #26282b;
     --background-200: #3f3c3f;
     --background-300: #515151;
-    --font-xs: 10px;
-    --font-sm: 12px;
     --font-base: 14px;
-    --font-lg: 16px;
-    --font-xl: 18px;
-    --font-2xl: 20px;
-    --font-3xl: 22px;
 }
 
 * {
@@ -30,57 +24,17 @@ body {
     grid-template-columns: 300px 1fr;
     height: 100vh;
     background-color: var(--background);
-    color: #fff;
-    margin: 0;
-}
-
-/* general styles */
-h2 {
-    font-size: var(--font-3xl);
-}
-
-h3 {
-    font-size: var(--font-2xl);
-}
-
-h4 {
-    font-size: var(--font-xl);
-}
-
-h5 {
-    font-size: var(--font-lg);
-}
-
-header {
-    padding: 30px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    width: 100%; 
-    box-sizing: border-box; 
-}
-
-
-
-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    font-size: var(--font-base);
     color: white;
-    background-color: var(--background);
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    flex-direction: row;
 }
 
-button:hover {
-    background-color: var(--primery);
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-/* Sidebar-Styling */
+
+/* Sidebar */
 #sidebar {
     background-color: var(--background-100);
     padding: 25px;
@@ -89,37 +43,28 @@ button:hover {
     row-gap: 40px;
 }
 
-#nav-buttons {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-}
-
+/* Navigation */
 #nav-buttons li {
-    list-style-type: none;
+    list-style: none;
     padding: 10px;
     border-radius: 10px;
     font-size: var(--font-base);
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px; /* Abstand zwischen Icon & Text */
+    gap: 10px;
 }
 
 #nav-buttons li:hover {
-    background-color: var(--primery);
+    background-color: var(--primary);
 }
 
-/* Icon Styling */
+/* Icons */
 .material-symbols-outlined {
-    font-variation-settings: 
-        'FILL' 0,
-        'wght' 300,
-        'GRAD' 0,
-        'opsz' 24;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
+/* Project List */
 .project-card {
     background-color: var(--background-200);
     border-radius: 8px;
@@ -127,106 +72,48 @@ button:hover {
 }
 
 .project-card:hover {
-    outline: 2px solid var(--primery);
+    outline: 2px solid var(--primary);
 }
 
 .card-header {
     display: flex;
-    justify-content: start;
-    padding: 15px 20px;
+    padding: 15px;
     align-items: center;
     border-bottom: 2px solid var(--background-300);
-    height: 60px;
 }
 
-.card-content {
-    padding: 30px 20px;
+.project-initials {
+    background-color: #ca8134;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+/* Dashboard */
+.dashboard-column {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
-    align-items: start;
-
+    gap: 16px;
 }
 
-.card-property {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.dashboard-card {
+    background-color: var(--background-200);
+    border-radius: 8px;
+    padding: 20px;
 }
 
-#project-list {
+#project-details > .main-page-content {
     display: grid;
     padding: 20px 40px;
     gap: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-}
-/* more styles */
-
-dialog {
-    background-color: transparent;
-    border: none;
-    margin: auto;
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
-}
-
-form {
-    width: 450px;
-    border-radius: 10px;
-    background-color: var(--background-100);
-    color: white;
-}
-
-form h2 {
-    padding: 20px;
-    border-bottom: 2px solid var(--background-200);
-}
-
-form .input-list {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    row-gap: 25px;
-}
-
-form .form-field-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: flex-start;
-    width: 100%; 
-}
-
-form .button-container {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    padding: 20px;
-    border-top: 2px solid var(--background-200);
-}
-
-label {
-    font-size: var(--font-base);
-    margin-bottom: 10px;
-    font-weight: 500;
-    color: rgba(150, 150, 150, 1)
-}
-
-input, textarea, select {
-    color: white;
-    background-color: var(--background-200);
-    padding: 15px;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: none;
-    font-size: var(--font-base);
-}
-
-input:focus, textarea:focus, select:focus {
-    outline: 2px solid var(--primery);
+    grid-template-columns: 475px 1fr;
+    height: 100%;
 }

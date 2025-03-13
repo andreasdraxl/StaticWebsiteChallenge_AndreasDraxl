@@ -10,7 +10,7 @@
 
 <body>
     <aside id="sidebar">
-        <img src="./img/company-logo.svg" alt="">
+        <img src="./img/company-logo.svg" alt="Company Logo">
         <ul id="nav-buttons">
             <li>
                 <span class="material-symbols-outlined">account_balance</span>
@@ -24,98 +24,50 @@
     </aside>
     
     <main id="content">
-        <dialog id="new-project-modal">
-            <form>
-                <h2>New Project</h2>
-                <div class="input-list">
-                    <div class="form-flield-container">
-                        <label>
-                            <span class="material-symbols-outlined">stylus_note</span>  
-                            Name</label>
-                        <input type="text">
+        <!-- Projects Page (wird standardmäßig versteckt) -->
+        <div class="page" id="projects-page" style="display: none;">
+            <header>
+                <h2>Projects</h2>
+                <div>
+                    <button id="new-project-btn">
+                        <span class="material-symbols-outlined">add</span>
+                        New Project
+                    </button>
+                </div>
+            </header>
+            <div id="project-list">
+                <div class="project-card">
+                    <div class="card-header">
+                        <p class="project-initials">HC</p>
+                        <div>
+                            <h5>Project Name</h5>
+                            <p>Project Description Goes Here</p>
+                        </div>
                     </div>
-                    <div class="form-flield-container">
-                        <label>
-                            <span class="material-symbols-outlined">menu</span>
-                            Discription</label>
-                        <textarea cols="30" rows="5" placeholder="Please discribe your project."></textarea>
-                    </div>
-                    <div class="form-flield-container">
-                        <label>
-                            <span class="material-symbols-outlined">account_box</span>
-                            Role</label>
-                        <select>
-                            <option>Architect</option>
-                            <option>Engineer</option>
-                            <option>Developer</option>
-                        </select>
-                    </div>
-                    <div class="form-flield-container">
-                        <label>
-                            <span class="material-symbols-outlined">check_circle</span>
-                            Status</label>
-                        <select>
-                            <option>Pending</option>
-                            <option>Active</option>
-                            <option>Finished</option>
-                        </select>
+                    <div class="card-content">
+                        <div class="card-property">
+                            <p class="property-label">Status</p>
+                            <p>Active</p>
+                        </div>
                     </div>
                 </div>
-                <div class="button-container">
-                    <button type="button">Cancel</button>
-                    <button type="submit">Accept</button>
-                </div>
-                
-            </form>
-        </dialog>
-        <header>
-            <h2>Projects</h2>
-            <div>
-                <button id="new-project-btn">
-                    <span class="material-symbols-outlined">add</span>
-                    New Project
-                </button>
             </div>
+        </div>
 
-        </header>
-        <div id="project-list">
-            <div class="project-card">
-                <div class="card-header">
-                    <p style="background-color: #ca8134;
-                        color: white; 
-                        font-weight: bold; 
-                        font-size: 16px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        width: 50px; 
-                        height: 50px; 
-                        border-radius: 12px;
-                        flex-shrink: 0;
-                        margin-right: 15px;">HC</p>
-                    <div>
-                        <h5>Project Name</h5>
-                        <p>Project Description Goes here</p>
-                    </div>
+        <!-- Hospital Center (soll sichtbar sein) -->
+        <div class="page" id="project-details">
+            <header>
+                <div>
+                    <h2>Hospital Center</h2>
+                    <p class="subtitle">Community Hospital located at downtown</p>
                 </div>
-                <div class="card-content">
-                    <div class="card-property">
-                        <p style="color: #969696">Status</p>
-                        <p>Active</p>
-                    </div>
-                    <div class="card-property">
-                        <p style="color: #969696">Status</p>
-                        <p>Active</p>
-                    </div>
-                    <div class="card-property">
-                        <p style="color: #969696">Status</p>
-                        <p>Active</p>
-                    </div>
-                    <div class="card-property">
-                        <p style="color: #969696">Status</p>
-                        <p>Active</p>
-                    </div>
+            </header>
+            <div class="main-page-content">
+                <div class="dashboard-column">
+                    <div class="dashboard-card">Project Information</div>
+                    <div class="dashboard-card">To-do List</div>
                 </div>
+                <div id="viewer-container" class="dashboard-card"></div>
             </div>
         </div>
     </main>
