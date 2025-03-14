@@ -10,6 +10,7 @@
     --background-100: #26282b;
     --background-200: #3f3c3f;
     --background-300: #515151;
+    --font-small: 10px;
     --font-base: 14px;
     --font-lg: 16px;
 }
@@ -26,6 +27,7 @@ body {
     height: 100vh;
     background-color: var(--background);
     color: white;
+    overflow: hidden;
 }
 
 .page {
@@ -106,7 +108,7 @@ body {
 }
 
 .dashboard-card {
-    background-color: var(--background-200);
+    background-color: var(--background-100);
     border-radius: 8px;
     padding: 20px;
 }
@@ -119,9 +121,9 @@ body {
     height: 100%;
 }
 
-.btn-scondary {
-    background-color: trans;
-    outline: 2px solid #969696;
+.btn-secondary {
+    background-color: transparent;
+    outline: 2px solid var(--background-300);
     width: 100px;
     text-align: center;
 }
@@ -155,11 +157,24 @@ button {
     color: white;
     border: none;
     border-radius: 100px;
-    display: none;
+    display: flex;
     align-items: center;
     column-gap: 5px;
 }
 
 button:hover {
     background-color: var(--primary-300);
+}
+
+
+
+#viewer-container {
+    background-color: var(--background-100);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-height: 100vh; /* Verhindert, dass es größer als das Browserfenster wird */
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Falls Inhalte größer sind, wird gescrollt */
 }
